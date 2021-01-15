@@ -1,0 +1,24 @@
+{
+  "name": "obniz-m5stack-ir-unit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmitsuoka0423/obniz-m5stack-ir-unit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmitsuoka0423/obniz-m5stack-ir-unit/issues"
+  },
+  "homepage": "https://github.com/tmitsuoka0423/obniz-m5stack-ir-unit#readme",
+  "dependencies": {
+    "obniz": "^3.12.0-beta.0",
+    "typescript": "^4.1.3"
+  }
+}

@@ -1,7 +1,7 @@
 import Obniz from 'obniz';
 import InfraredLED, { InfraredLEDOptions } from 'obniz/dist/src/parts/Infrared/InfraredLED';
 
-import { on } from './signal';
+import { on, off } from './signal';
 
 const irLedPin: InfraredLEDOptions = {
   anode: 9,
@@ -9,13 +9,16 @@ const irLedPin: InfraredLEDOptions = {
 };
 
 const main = async() => {
-  const obniz = new Obniz('OBNIZ_ID_HERE');
+  const obniz = new Obniz('1102-0710');
   await obniz.connectWait();
 
   obniz.io10?.output(true);
   const irLed: InfraredLED = obniz.wired('InfraredLED', irLedPin);
   
   irLed.send(on);
+  await obniz.wait(1000);
+
+  irLed.send(off);
   await obniz.wait(1000);
 }
 

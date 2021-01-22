@@ -9,7 +9,7 @@ const irLedPin: InfraredLEDOptions = {
 };
 
 const main = async() => {
-  const obniz = new Obniz('1102-0710');
+  const obniz = new Obniz('OBNIZ_ID_HERE');
   await obniz.connectWait();
 
   obniz.io10?.output(true);
